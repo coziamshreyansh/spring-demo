@@ -1,10 +1,10 @@
 # spring-demo
 
-
-starter - it is the bundle of all the dependencies required in a project 
+starter - it is the bundle of all the dependencies required in a project
 
 server -
 Spring Boot, you don't need to manually set up a separate server because it comes with an embedded server inside the .jar file. The commonly used embedded servers in Spring Boot are:
+
 1. Tomcat (Default in Spring Boot)
    ✅ Pros:
 
@@ -16,7 +16,6 @@ Strong community support and stability.
 Slightly heavier compared to Jetty and Undertow.
 Lower performance in handling high concurrent requests compared to Undertow.
 🛠 Best For: General-purpose web applications with moderate traffic.
-
 
 2. Jetty
    ✅ Pros:
@@ -46,3 +45,7 @@ Which One Should You Choose?
 ✅ Tomcat → Default, stable, best for general-purpose apps.
 ✅ Jetty → If you need WebSockets, async processing, or lower memory usage.
 ✅ Undertow → If you need the best performance with high concurrency.
+
+-----------------------------------Actuators----------------------------------
+Actuators are to monitor spring projects, such as health, metrics, session
+-- Gives us diff endpoints for our projects,
