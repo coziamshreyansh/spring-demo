@@ -25,9 +25,20 @@ public class HomeController {
     }
 
 //    using route parameters
-    @PostMapping("/user/{id1}/{id2}")
+    @GetMapping("/user/{id1}/{id2}")
     public String getPathVariables(@PathVariable String id1, @PathVariable("id2") String name){
         // here we explicitly mapped name with id2
         return "Path variables were: "+id1+" & "+name;
     }
+
+
+//    request parameters
+    @PostMapping("/requestParam")
+    public String getRequestVariables(@RequestParam(name = "name", required = false, defaultValue = "") String nameIS, @RequestParam("email") String emailID){
+//        this we pass in "Param" of postman as a key-value pair
+        return "Request parameters are: " + nameIS + " & " + emailID;
+    }
 }
+
+
+
